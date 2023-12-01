@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family:'Poppins'; 
+    /* Fonts 
+   -> helvetica
+   -> Futura
+   -> Century Expanded
+   -> Bodoni
+   -> 
+    */
+}
+
+:root{
+    --first-color--:#f8f8ff;
+    --second-color--: #864def;
+    --third-color--: #0a3b5c;
+    --forth-color--: #1b4c5d;
+    --fifth-color--: #34eef1;
+    --font-size-XS--: 0.6em;
+    --font-size-S--: 0.8em;
+    --font-size-M--: 1em;
+    --font-size-L--: 1.5em;
+    --font-size-XL--: 1.7em;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #34eef1;
+    scroll-behavior: smooth;
+}
+
+#conti{
+    display: grid;
+    grid-template-columns: minmax(100px,25%) minmax(300px,75%);
+    grid-template-rows: 99.25vh;
+    gap: .25%;
+    margin: .2vh .25%;
+}
+
+
+
+
+
+/* ------------------- */
+.header-nav{
+    background:var(--first-color--);
+    width: 100%;
+    /* height: 560px; */
+}
+
+header{
+    width: 100%;
+    background: var(--first-color--);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+ 
+nav{
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: var(--second-color--);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Vladimir Script Regular';
+    cursor:default;
+    
+}
+.logo span{
+    color: var(--forth-color--);
+    font-family: '';
+    font-size: 1.7rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.nav ol{
+    display: flex;
+    list-style: none;
+    gap: .4rem;
+    
+}
+
+
+.nav ol li a{
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    color: var(--third-color--);
+    transition: all .8s;
+    position: relative;
+    font-size: var(--font-size-s--);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.nav ol li a::before{
+
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -4px;
+    width: 120%;
+    border-radius: 0px 0px 5px 5px;
+    background: var(--second-color--);
+    transform-origin:top;
+    background: linear-gradient(to left,var(--third-color--), var(--forth-color--));
+    transform: scaleY(0.0);
+    z-index: -1;
+    transition: all .4s;
+
+}
+
+.nav ol li a:hover::before{
+    transform: scaleY(1.3);
+    height: 100%;
+}
+
+.nav ol li a:hover{ 
+    color: var(--fifth-color--);
+}
+
+.btn-login{
+
+    padding:1% ;  
+    border: #0a3b5c 2px solid;
+    background: var(--first-color--);
+    font-size: var(--font-size-m--);
+    font-weight: bold;
+    transition: all .5s;
+    position: relative;
+    cursor: pointer;
+
+}
+
+
+.btn-login:hover{
+    border-color:var(--first-color--);
+   background-color: var(--fifth-color--);
+}
+/* h */
+#continer{
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--first-color--);
+} 
+
+/* the menu of the resource */
+#tab-bar{
+    width: 90%;
+    background-color: var(--first-color--);
+    border-bottom: var(--second-color--) .5px solid;
+    color:#1b4d5df5;
+    margin: 0 auto;
+}
+
+#dropDownList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3px;
+    width: 100%;
+    padding: 1% 0% 1% 0%;
+}
+
+#tab{
+    display: flex;
+    gap: 3px;
+ 
+}
+#tab i{
+    font-size: var(--font-size-M--);
+    margin-right: 5px;
+    color: var(--second-color--);
+}
+
+.tab-titles{
+    
+    font-size: var(--font-size-M--);
+    background-color: var(--first-color--);
+    border-radius: 5px;
+    padding: .1%;
+    cursor: pointer;
+    border: .5px var(--forth-color--) solid;
+    padding: 3px;  
+
+}
+
+
+#dorpDownList-conti{ 
+    background-color: var(--first-color--);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px white solid;
+    display: none;
+    width: fit-content;
+}
+
+#dorpDownList-conti h2{
+    display: inline;
+}
+
+#close,#open{
+    margin: 2% 0;
+    display: none;
+}
+
+#dorpDownList-conti i{
+    font-size: var(--font-size-XS--);
+    margin-left: 2px;
+}
+
+.tab-titles:hover{
+    background-color: var(--forth-color--);
+    color: var(--first-color--);
+   
+}
+
+.active-link {
+    background-color: var(--forth-color--);
+    color: var(--first-color--);
+}
+
+.search{
+    width: fit-content;
+    text-align: right;
+}
+
+.search-form{
+    border: 1px var(--forth-color--) solid;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.search-form input{
+    border: none;
+    outline: none;
+    padding: 2px;
+}
+
+
+.search-form button{
+    font-size: var(--font-size-M--);
+    color: var(--forth-color--) ;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.search-form button:hover{
+    color:#864defb7;
+}
+
+/* start point of ppt resource */
+.titles{
+    color: var(--second-color--);
+    font-size: var(--font-size-M--)
+}
+
+#power-point{
+    width: 90%;
+    min-height: 90vh;
+    background-color:var(--first-color--);
+    padding: 1%;
+    padding-top:10px;
+    margin: 0 auto;
+    display: none;
+}
+
+/* free ppt resources continer */
+#free-ppt-resources{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: start;
+    border-bottom: 2px var(--forth-color--) solid;
+    transition: .5s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom:1.5%;
+}
+
+.free-unit-ppt-resources{
+    max-width: 200px;
+    min-width: 130px;
+    flex-grow: 1;
+    /* height: 250px; */
+    background-color:var(--forth-color--);
+    box-shadow: 3px 3px 2px #000000c6;
+    border-radius: 10px; 
+    margin-bottom: 9px;
+    /* padding: 2%; */
+
+}
+
+.free-unit-ppt-image-continer{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.free-unit-ppt-image-continer img{
+    width: 100%;
+    height: 100%;
+}
+
+.free-unit-ppt-image-continer img:hover{
+    transform: scale(1.01,1.01);
+}
+
+/* payable all unit ppt resources continer */
+
+#payable-ppt-resources-all{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 10px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: start;
+    border-bottom: 2px var(--forth-color--) solid;
+    transition: .5s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom:1.5% ;
+}
+
+.all-unit-ppt-resources{
+
+    max-width: 200px;
+    min-width: 150px;
+    /* height: 370px; */
+    box-shadow: 3px 3px 2px hsl(51, 100%, 50%),-2px -2px #eacc23;
+    border-radius: 10px; 
+    margin-bottom: 9px;
+    /* padding: 2%; */
+    
+}
+
+.all-unit-ppt-image-continer{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+   
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.all-unit-ppt-image-continer img{
+    width: 100%;
+    height: 100%;
+}
+
+.all-unit-ppt-image-continer img:hover{
+    transform: scale(1.01,1.01);
+}
+
+.data{
+    height: 100px;
+    background-color: #1b4c5d;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius:10px ;
+    padding: 1.5%;
+}
+
+
+/*payable spacific unit resources continer */
+
+#payable-ppt-resources-specific{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 5px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: start;
+    border-bottom: 2px var(--forth-color--) solid;
+    transition: .5s;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-bottom:1.5% ;
+}
+
+.specific-unit-ppt-resource{
+    max-width: 200px;
+    min-width: 130px;
+  
+    margin-bottom: 9px;
+    padding-bottom:4% ;
+    background-color: #34eef1;
+    height: 500px;
+}
+
+/* spacific unit resources image continer*/
+.specific-unit-ppt-image-continer{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+  
+    background-color:#ffd700;
+    padding: 2%;
+    border-radius: 10px; 
+}
+
+/* spacific unit resources image */
+.specific-unit-ppt-image-continer img{
+    width: 100%;
+    height: 100%;
+   border-radius: 10px;
+}
+
+.specific-unit-ppt-image-continer img:hover{
+    transform: scale(1.01,1.01);
+}
+
+
+/* course name */
+.course-name{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+/* end of ppp part */
+/* start point of books resource */
+#books{
+    width: 90%;
+    min-height: 100vh;
+    background-color:var(--first-color--);
+    border-radius: 10px;
+    padding: 1%;
+    margin: 0 auto;
+    /* display: none; */
+}
+
+#books-resources{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+    gap: 5px;
+    grid-auto-flow: row;
+    transition: .5s;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.books-image-continer{
+
+    width: 100%;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border:1px var(--first-color--) solid;
+    object-fit: cover;
+}
+.books-image-continer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+} 
+
+
+/* ent of bookes part */
+/* start point of videos resource */
+#videos{
+    width: 90%;
+    min-height: 100vh;
+    background-color:var(--first-color--);
+    border-radius: 10px;
+    padding: 1%;
+    margin: 0 auto;
+    display: none;
+}
+
+#videos-resources{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 5px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+iframe{
+    border-radius: 10px;
+    width: 100%;
+    height: 180px;
+}
+
+
+@media  (max-width:700px) {
+    .tab-titles{
+        font-size: 78%;
+    }
+}
+
+@media  (max-width:610px){
+
+    #dropDownList{
+        position: relative;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center; 
+    }
+
+    #tab{
+        position: absolute;
+        top: 110%;  
+        width: 250px;
+        height: 230px;
+        background-color: #1b4c5d;
+        display: none;
+        padding-top: 7%;
+        border-radius: 10px;
+        z-index: 999;
+    }
+
+    .res{
+        width: 150px;
+        padding: .3%;
+        display: flex;
+        align-items: center;
+    }
+    .res i{
+        color: var(--forth-color--);
+    }
+    .tab-titles{
+        text-align: left;
+        font-size: 20px;
+        background:none;
+        border-radius: 0px;
+        padding: 5% 2%;
+        padding-left: 10%;
+        cursor: pointer;
+        border: none;
+        border-bottom:1.5px var(--first-color--) solid ;
+        color:#34eef1;
+        
+    }
+
+    #dorpDownList-conti{
+        padding: 0 1%;
+         width: 130px;
+         display: block;
+    }
+    #dorpDownList-conti #close{
+        display: none;
+    }
+   .titles{
+     font-size: var(--font-size-S--);
+    
+     
+    }
+    #tab i{
+    
+        margin-right: 10px;
+    }
+
+} 
+

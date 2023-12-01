@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resource_dashbord.css">
+</head>
+<body>
+
+    <!-- -------------main part start----------- -->
+    <main  id="input-main-continer">
+        <!-- ---------------side part start-------------------->
+        <aside id="input-side-bar">
+                <div class="con">
+                    <h2>Resource</h2>
+                </div>
+                <div id="work">
+
+                    <h3><a href="#power">power point</a></h3>
+                    <h3><a href="#book"> Books</a></h3>
+                    <h3><a href="#video"> Video</a></h3>
+                
+                </div>
+        </aside>
+        <!-- ---------------side part end-------------------->
+        <!-- ---------------display part start-------------------->
+        <section id="display-resource-part">
+
+             <!-- ---------------power part end-------------------->
+             <div id="power">
+                <div class="resource-tab-bar">
+                    <h3><a href="#insert-ppt">Insert</a> </h3>
+                    <h3><a href="#search-ppt">search</a> </h3>
+                    <h3 class="tab-element-list" id="list-ppt">list </h3>
+                    <div class="continer">
+                        <div class="resource-list-type" id="list-ppt-menu">
+                            <h3><a href="#free-ppt">free</a> </h3>
+                            <h3><a href="#all-ppt">all</a> </h3>
+                            <h3><a href="#single-ppt">single</a> </h3>
+                        </div>
+                    </div>
+                    <div class="search">
+                    
+                        <form action="" class="search-form">  
+                            <input type="search" name="search_box" placeholder="search courses..." maxlength="100">
+                            <button type="submit" class="fa fa-search" name="search_box"></button>
+                        </form> 
+                    </div>
+
+                    <div class="department">
+                        <form action="" class="department-form">
+                            <label for="type">department</label>                                   
+                            <select name="type" id="type">
+                                <option value="free"><h2>Free</h2></option>
+                                <option value="free"> <h2>All Unit</h2></option>
+                                <option value="free"> <h2>Single Unit</h2></option>
+                            </select>
+                            <button type="submit" class="fa fa-search" name="choice-department">choice</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div id="power-point-see-and-insert">
+
+                    <!-- ---------------power point insert start-------------------->
+                    <div class="insert-part" id="insert-ppt">
+                        
+                        <div class="form">
+
+                            <h2 class="title">insert</h2>
+
+                            <form action="ResourceInput.php" id="input" method="post">
+
+                                <label for="course">Course Name</label>
+                                <input type="text" name="course" id="course"><br>
+                                <label for="ppt">Ppt File</label>
+                                <input type="file" name="" accept="ppt" id="ppt"><br>
+                                <label for="photo">Photo</label>              
+                                <input type="file" name="photo" id="photo"><br>   
+                                <label for="type">Resource Type</label>
+                                    
+                                <select name="type" id="type">
+                                    <option value="free"><h2>Free</h2></option>
+                                    <option value="free"> <h2>All Unit</h2></option>
+                                    <option value="free"> <h2>Single Unit</h2></option>
+                                </select><br>
+                                <label for="price">Price</label>
+                                <input type="text" name="price" id="price" maxlength="5"><br>
+                                
+                                <div class="submit">
+                                    <input type="submit" value="Enter" id="" name="submit">
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                
+                    <!-- ---------------power point insert end-------------------->
+                    <!-- ---------------power point free list start-------------------->
+                    <div class="list-part" id="free-ppt">
+
+                        <div class="list-continer">
+
+                            <h2 class="title">free list</h2>
+
+                            <div class="tableFixHead">
+                                <table>                                 
+                                    <thead>
+                                        <tr>                                          
+                                            <th style="border-top-left-radius: 1rem; border:none">Co Name</th>
+                                            <th>File</th>
+                                            <th>Image</th>
+                                            <th>Price</th>
+                                            <th>Who Insert</th>
+                                            <th style="border-top-right-radius: 1rem; border:none">Date</th>                                             
+                                        </tr> 
+                                    </thead>     
+                                    <tbody>                                   
+                                        <!-- <?php 
+                                        $no=1;
+                                        while($no<1){?>
+                                        <?php echo "<tr>" ?>
+                                            <?php echo" <td  class=\"fixed\">".$no++."</td>" ?>
+                                            <?php echo" <td>"."['courseName']"."</td>" ?>
+                                            <?php echo" <td>"."[whoInsert]"."</td>" ?>
+                                            <?php echo" <td>free465464</td>" ?>
+                                            <?php echo" <td>free5464</td>" ?>
+                                            <?php echo" <td>free</td>" ?>
+                                        <?php echo "</tr>" ?>
+                                        <?php }?>                                                              -->
+                                    </tbody>                                
+                                </table>                           
+                            </div>
+                            <div class="table-foot">
+                                <div class="row">
+                                    <h3 class="data">Total</h3>
+                                    <h3 class="data">hjsdfsd</h3>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+                    <!-- ---------------power point free list end-------------------->
+                    <!-- ---------------power point all list start-------------------->
+                    <div class="list-part" id="all-ppt">
+
+                        <div class="list-continer">
+
+                            <h2 class="title">all unit list</h2>
+
+                            <div class="tableFixHead">
+                        
+                                <table>                                 
+                                    <thead>
+                                        <tr>                                          
+                                            <th style="border-top-left-radius: 1rem; border:none">Co Name</th>
+                                            <th>File</th>
+                                            <th>Image</th>
+                                            <th>Price</th>
+                                            <th>Who Insert</th>
+                                            <th style="border-top-right-radius: 1rem; border:none">Date</th>                                             
+                                        </tr> 
+                                    </thead>     
+                                    <tbody>
+                                    
+                                                <!-- <?php 
+                                            $no=1;
+                                            while($no<1){?>
+                                            <?php echo "<tr>" ?>
+                                                <?php echo" <td  class=\"fixed\">".$no++."</td>" ?>
+                                                <?php echo" <td>"."['courseName']"."</td>" ?>
+                                                <?php echo" <td>"."[whoInsert]"."</td>" ?>
+                                                <?php echo" <td>free465464</td>" ?>
+                                                <?php echo" <td>free5464</td>" ?>
+                                                <?php echo" <td>free</td>" ?>
+                                            <?php echo "</tr>" ?>
+                                        <?php }?>  -->
+                                                                
+                                    </tbody>
+                                
+                                </table>
+                            
+                            </div>
+                            <div class="table-foot">
+                                <div class="row">
+                                    <h3 class="data">Total</h3>
+                                    <h3 class="data">hjsdfsd</h3>
+                                </div>
+                            </div>
+                        
+
+                        </div>
+
+                    </div>
+                    <!-- ---------------power point all list end-------------------->
+                    <!-- ---------------power point single list start-------------------->
+                    <div class="list-part" id="single-ppt">
+
+                        <div class="list-continer">
+
+                            <h2 class="title">single unit list</h2>
+
+                            <div class="tableFixHead">
+                        
+                                <table>                                 
+                                    <thead>
+                                        <tr>                                          
+                                            <th style="border-top-left-radius: 1rem; border:none">Co Name</th>
+                                            <th>File</th>
+                                            <th>Image</th>
+                                            <th>Price</th>
+                                            <th>Who Insert</th>
+                                            <th style="border-top-right-radius: 1rem; border:none">Date</th>                                             
+                                        </tr> 
+                                    </thead>     
+                                    <tbody>
+                                            <!-- <?php 
+                                            $no=1;
+                                            while($no<0){?>
+                                            <?php echo "<tr>" ?>
+                                                <?php echo" <td>".$no++."</td>" ?>
+                                                <?php echo" <td>"."['courseName']"."</td>" ?>
+                                                <?php echo" <td>"."[whoInsert]"."</td>" ?>
+                                                <?php echo" <td>free465464</td>" ?>
+                                                <?php echo" <td>free5464</td>" ?>
+                                                <?php echo" <td>free</td>" ?>
+                                            <?php echo "</tr>" ?>
+                                        <?php }?>                           -->
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="table-foot">
+                                <div class="row">
+                                    <h3 class="data">Total</h3>
+                                    <h3 class="data">hjsdfsd</h3>
+                                </div>
+                            </div>
+                        </div>
+                   
+                    </div>
+                     <!-- ---------------power point single list end-------------------->
+                    <!-- ------------------search part start-------- -->
+                    <div class="search-part" id="search-ppt">
+                       
+                      
+                        <h2 class="title">searched resource</h2>
+                       
+                        <div class="tableFixHead">
+                    
+                            <table>                                 
+                                <thead>
+                                    <tr>                                          
+                                        <th style="border-top-left-radius: 1rem; border:none">Co Name</th>
+                                        <th>File</th>
+                                        <th>Image</th>
+                                        <th>Price</th>
+                                        <th>Who Insert</th>
+                                        <th style="border-top-right-radius: 1rem; border:none">Date</th>                                             
+                                    </tr> 
+                                </thead>     
+                                <tbody>
+                                        <!-- <?php 
+                                        $no=1;
+                                        while($no<0){?>
+                                        <?php echo "<tr>" ?>
+                                            <?php echo" <td>".$no++."</td>" ?>
+                                            <?php echo" <td>"."['courseName']"."</td>" ?>
+                                            <?php echo" <td>"."[whoInsert]"."</td>" ?>
+                                            <?php echo" <td>free465464</td>" ?>
+                                            <?php echo" <td>free5464</td>" ?>
+                                            <?php echo" <td>free</td>" ?>
+                                        <?php echo "</tr>" ?>
+                                    <?php }?>                           -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="table-foot">
+                            <div class="row">
+                                <h3 >Total</h3>
+                                <h3 >hjsdfsd</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ------------------search part end-------- -->
+                    <!-- ------------------update part start-------- -->
+                    <div class="update-part" id="update-ppt">
+                        <h3 class="title">update</h3>
+
+                        <form action="" id="input" class="form">
+                                <label for="course">Course Name</label>
+                                <input type="text" name="course" id="course"><br>
+                                <label for="ppt">ppt file</label>
+                                <input type="file" name="" accept="ppt" id="ppt"><br>
+                                <label for="type">Resource Type</label>
+                                <select name="type" id="type">
+                                    <option value="free"><h2>free</h2></option>
+                                    <option value="free"> <h2>all unit</h2></option>
+                                    <option value="free"> <h2>single unit</h2></option>
+                                </select><br>
+                                <label for="photo">Photo</label>
+                                
+                                <input type="file" name="photo" id="photo" ><br>
+                                
+                                <div class="imgI">
+                                    <img src="" alt="no image">
+                                </div>
+                                <div class="submit">
+                                    <input type="submit" value="Update" id="" name="submit">
+                                </div>
+                        </form>
+                    </div>
+                       <!-- ------------------update part end-------- -->
+                </div>
+             </div>
+            <!-- ---------------power part end-------------------->
+        </section>  
+        <!-- ---------------display part end-------------------->
+    </main>   
+    <!-- <script src="resource_dashbord.js"></script>  -->
+</body>
+</html>
